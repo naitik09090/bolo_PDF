@@ -309,7 +309,7 @@ const PDFSignatureEngine = () => {
             }
         } catch (error) {
             console.error('Error For MongoDB', error);
-            alert('Error For MongoDB ');
+            alert('Error For MongoDB connection ');
         } finally {
             setIsSaving(false);
         }
