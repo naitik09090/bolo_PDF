@@ -54,7 +54,7 @@ const pdfAuditSchema = new mongoose.Schema({
         required: true
     },
     fields: [{
-        type: String,
+        fieldType: String,  // Changed from 'type' to 'fieldType' to avoid conflict
         label: String,
         page: Number,
         coordinates: {
@@ -347,7 +347,7 @@ app.post('/api/pdf/sign-pdf', upload.single('pdf'), async (req, res) => {
             originalHash: serverOriginalHash,
             signedHash: signedHash,
             fields: fields.map(f => ({
-                type: f.type,
+                fieldType: f.type,  // Changed from 'type' to 'fieldType'
                 label: f.label,
                 page: f.page,
                 coordinates: {
