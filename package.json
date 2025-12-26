@@ -1,0 +1,17 @@
+{
+  "name": "bolopdf",
+  "version": "1.0.0",
+  "description": "PDF Signature Engine - BoloForms Assignment",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd bolosign && npm run dev",
+    "install-all": "npm install && cd server && npm install && cd ../bolosign && npm install"
+  },
+  "keywords": ["pdf", "signature", "mongodb"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
